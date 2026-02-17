@@ -25,7 +25,7 @@ SECRET_KEY = '3$!=nvj&^at86+209t2!8$%da2r3rc&)po^492+p*+6nes)io2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
