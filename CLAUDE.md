@@ -14,7 +14,7 @@ The game tracks gold totals and activity history in the session, displaying the 
 ## Technology Stack
 
 - **Python**: 3.x
-- **Django**: 1.10 (original version - compatible with Django 2.x+)
+- **Django**: originally 1.10; currently updated to support Django 2.2–4.2 (see `requirements.txt`: `Django>=2.2,<5.0`)
 - **Database**: SQLite3 (default)
 - **Frontend**: Bootstrap 4.1.3, HTML5, CSS3
 
@@ -101,11 +101,11 @@ http://127.0.0.1:8000/
 
 ## Development Notes
 
-### Original Django Version
-This project was created with Django 1.10 approximately 5+ years ago. The code is compatible with newer Django versions with minimal modifications:
+### Django Version History
+This project was originally created with Django 1.10 approximately 5+ years ago. It has since been updated to support Django 2.2–4.2:
 
-- URL routing uses `django.conf.urls.url()` (deprecated in Django 4.0+)
-- For Django 4.0+, consider migrating to `django.urls.path()` or `django.urls.re_path()`
+- URL routing has been migrated from `django.conf.urls.url()` to `django.urls.re_path()` (the deprecated `url()` was removed in Django 4.0)
+- `requirements.txt` pins `Django>=2.2,<5.0`
 
 ### Session Configuration
 The app relies heavily on Django sessions. Ensure session middleware is enabled in settings.
